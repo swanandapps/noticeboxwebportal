@@ -1,6 +1,7 @@
 var express = require('express');
 
 
+var mangoosecrate = require('mongoose-crate-s3')
 
 var bodyParser = require('body-parser')
 var mongoose = require('mongoose')
