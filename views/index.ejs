@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+
+    </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css' />
+</head>
+<style>
+    .section-form {
+        width: 37em;
+        margin: 2em auto;
+        background-color: #f3efe7;
+        padding: 2em;
+    }
+    
+    .section-form .intro {
+        margin-bottom: 2em;
+    }
+    
+    .section-form h1 {
+        text-align: center;
+        font-size: 1.6em;
+        margin-bottom: 0.6em;
+    }
+    
+    .section-form h2 {
+        text-align: center;
+        font-size: 1.23077em;
+    }
+    
+    input[type=text] {
+        height: 45px;
+    }
+    
+    input[type=text],
+    textarea {
+        width: 100%;
+        margin-bottom: 1em;
+        font-size: .9em;
+        color: #cfcece;
+        font-weight: 300;
+        padding: .5em 1em;
+        border: none;
+        color: #555555;
+        font-weight: 300;
+    }
+    
+    input[type=button] {
+        cursor: pointer;
+        margin: 0;
+        padding: .5em 2em;
+        background: #636363;
+        border: none;
+        color: #fff;
+        font-size: 1em;
+        font-weight: 400;
+    }
+    
+    #header {
+        height: 7.5em;
+        position: relative;
+        background: linear-gradient(40deg, #ffd86f, #fc6262);
+        font-family: 'Montserrat', sans-serif;
+    }
+</style>
+
+<body>
+    <div class="container-fluid " id="header">
+        <span style="margin-top:0.9em; font-size: 2.5em; position: absolute; color:black; margin-left:0.3em "><a class="hinge" href="/" style="text-decoration: none; color:rgb(49, 48, 48)"><b  >NoticeboX</b><span style="font-size: 20px;margin-left: 7px">Web Portal</span>        </a>
+
+        </span>
+    </div>
+
+    <div class="section-form">
+        <form action="/upload" method="POST">
+
+            <div class="ui fluid selection dropdown" style="height: 2em;margin-bottom:25px;">
+                <input type="hidden" id="user" name="department" style="font-size:1.5em;width: 40em" required>
+                <i class="dropdown icon"></i>
+                <div class="default text" id="dropdown">Select Department</div>
+                <div class="menu">
+                    <div class="item" data-value="computerscience" style="font-size: 1.5em;">
+                        <img class="ui mini avatar image" src="https://image.ibb.co/kkMAYc/employee1.png" style="font-size:0.8em; margin-bottom:0.5em;"> Computer Science
+                    </div>
+                    <div class="item" data-value="etc" style="font-size: 1.5em;">
+                        <img class="ui mini avatar image" src="https://image.ibb.co/n7MY3c/avatar2_large.png" style="font-size:0.8em; margin-bottom:0.5em;"> Electronics and Telecommunication
+                    </div>
+                    <div class="item" data-value="it" style="font-size: 1.5em;">
+                        <img class="ui mini avatar image" src="https://image.ibb.co/mzRcDc/employee2.png" style="font-size:0.8em; margin-bottom:0.5em;"> Information Technology
+                    </div>
+
+                </div>
+            </div>
+
+            <input type="text" value="" placeholder="Name" name="name" tabindex="3" />
+            <textarea placeholder="Message" name="message" tabindex="5" rows="5"></textarea>
+            <input type="file" class="form-control-file" name="file" id="exampleFormControlFile1">
+
+            <button class="btn btn-lg " type="submit" value="Send Notice" style="margin-top: 2em">Create Notice</button>
+        </form>
+    </div>
+
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js "></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js "></script>
+<script>
+    $('.ui.dropdown')
+        .dropdown();
+</script>
+
+</html>
